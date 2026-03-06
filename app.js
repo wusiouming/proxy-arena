@@ -2,6 +2,7 @@ import { EMOJI_MAP, ALL_EMOJIS } from './constants.js';
 import { initBackground, getBackgroundMesh, getBgTextures } from './background.js';
 import { emojis, EmojiEntity, checkCollisions, interactionStats } from './physics.js';
 import { startDebate } from './debate.js';
+import { initBackgroundMusic } from './audio.js';
 
  // --- Constants & State ---
 
@@ -299,6 +300,7 @@ window.triggerSessionArchive = showSessionArchive;
 
 // --- Initialization ---
 initBackground();
+initBackgroundMusic('byte04.mp3');
 gameLoop();
 
 SEND_BTN.addEventListener('click', () => {

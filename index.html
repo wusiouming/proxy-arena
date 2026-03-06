@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Living Language</title>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://esm.sh/three@0.160.0",
+            "nipplejs": "https://esm.sh/nipplejs@0.10.1"
+        }
+    }
+    </script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="canvas-container"></div>
+    <div id="glitch-overlay"></div>
+    
+    <div id="arena-fence">
+        <div class="fence-bar top">
+            <div class="marquee">
+                LIVING LANGUAGE ARENA // SYSTEM_STATUS: ONLINE // PROTOCOL_V3.1 // FLOW_ACTIVE //
+                <span id="arena-stats"></span>
+            </div>
+        </div>
+        <div class="fence-bar bottom"><div class="marquee">LIVING LANGUAGE ARENA // SYSTEM_STATUS: ONLINE // PROTOCOL_V3.1 // FLOW_ACTIVE // </div></div>
+        <div class="fence-bar left"><div class="marquee">LIVING LANGUAGE ARENA // SYSTEM_STATUS: ONLINE // PROTOCOL_V3.1 // FLOW_ACTIVE // </div></div>
+        <div class="fence-bar right"><div class="marquee">LIVING LANGUAGE ARENA // SYSTEM_STATUS: ONLINE // PROTOCOL_V3.1 // FLOW_ACTIVE // </div></div>
+    </div>
+
+    <div id="emoji-layer"></div>
+    
+    <div id="archive-panel">
+        <div class="archive-content" id="archive-content">
+            <!-- Filled dynamically -->
+        </div>
+    </div>
+    
+    <div id="ranking-panel">
+        <div class="ranking-header">TOP SIGNALS</div>
+        <div class="ranking-body" id="ranking-body">
+            <div class="ranking-empty">Waiting for interactions...</div>
+        </div>
+        <div class="ranking-meta" id="ranking-meta"></div>
+    </div>
+    
+    <div id="ui-container">
+        <div class="input-wrapper">
+            <input type="text" id="text-input" placeholder="Type something to bring it to life..." autocomplete="off">
+            <button id="send-btn">Generate</button>
+            <button id="toggle-ui-btn" title="Toggle UI">↙️</button>
+        </div>
+    </div>
+
+    <script type="module" src="app.js"></script>
+</body>
+</html>
